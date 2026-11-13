@@ -1,12 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Testing Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Jennifer | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
-    <h1>
-      Hello from vscode!
-    </h1>
-    <script src = "app.js"></script>
+    <!-- navigation -->
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main">
+        <a href="index.html" class="logo">Jennifer<span>.</span></a>
+
+        <div class="nav-links">
+          <a href="index.html" class="active" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+          <a href="contact.html" class="btn btn-primary btn-small">Resume</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- introduction -->
+      <section class="intro container">
+        <div class="intro-text">
+          <span class="pill pill-coral">Research . Projects . Internships</span>
+          <h1>Hi, I'm Jennifer. I <span class="highlight">am a meche master's student</span></h1>
+          <p class="lead">
+            short intro
+          </p>
+
+          <div class="button-row">
+            <a href="projects.html" class="btn btn-primary">See Projets</a>
+            <a href="contact.html" class="btn btn-outline">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="intro-art">
+          <div class="shape shape-circle" aria-hidden="true"></div>
+          <div class="shape shape-square" aria-hidden="true"></div>
+          <div class="shape shape-dot" aria-hidden="true"></div>
+          <div class="photo">photo</div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <script src="app.js"></script>
   </body>
 </html>
