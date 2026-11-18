@@ -1,7 +1,7 @@
 /* COLORS */
 
 :root{
-    --indigo: #4f464f;
+    --indigo: #4f46e5;
     --indigo-dark: #3b35c9;
     --indigo-light: #eef0ff;
     --coral: #f2683c;
@@ -9,7 +9,7 @@
     --coral-light: #fff0ea;
     --mint-dark: #0b6447;
     --mint-light: #e6f7f1;
-    --ink: #1b12f;
+    --ink: #1b1b2f;
     --muted: #4a4a63;
     --border: #eceaf5;
     --background: #fafaff;
@@ -68,9 +68,19 @@ img{
 .logo{
     font-family: "Space Grotesk", sans-serif;
     font-weight: 700;
-    font-size: 24 px;
+    font-size: 24px;
     color: var(--ink);
     text-decoration: none;
+}
+
+.logo span{
+    color: var(--coral)
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .nav-links a{
@@ -78,7 +88,7 @@ img{
     border-radius: 999px;
     color: var(--muted);
     font-weight: 500;
-    font-size: 15 px;
+    font-size: 15px;
     text-decoration: none;
 }
 
@@ -96,13 +106,16 @@ img{
 .btn {
     display: inline-block;
     padding: 14px 26px;
-    border-radius: 999 px;
+    border-radius: 999px;
     font-weight: 600;
     font-size: 16 px;
     text-decoration: none;
     transition: transform 0.15s;
 }
 
+.btn:hover{
+    transform: translateY(-2px);
+}
 .btn-primary {
     background: var(--indigo-dark);
     color: white;
@@ -111,12 +124,12 @@ img{
 .nav-links a.btn-primary{
     background: var(--indigo);
     color: white;
-    margin-left: 8 px;
+    margin-left: 8px;
 }
 
 .btn-small{
-    padding: 10 px 20 px;
-    font-size: 15 px;
+    padding: 10px 20px;
+    font-size: 15px;
 }
 
 .btn-outline{
