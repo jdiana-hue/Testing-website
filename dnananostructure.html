@@ -41,7 +41,7 @@
     <!-- project header -->
     <header class="project-header">
       <span class="pill pill-mint">Class project</span>
-      <h1>[Project name]: Senior Design</h1>
+      <h1>Redesigning a DNA Nanostructure for Tumor Drug Delivery</h1>
     </header>
 
     <!-- main figure -->
@@ -52,17 +52,13 @@
 
     <!-- description -->
     <article class="project-content">
-      <p>[The problem: What was the design challenge? Who was the sponsor or client, if any?
-      Why did it matter?]</p>
+      <p><strong>Introduction.</strong> Chemotherapy damages healthy tissue because the drug travels everywhere the bloodstream goes. One answer encases the drug in a DNA nanostructure carrying an aptamer, a short DNA sequence that recognizes a protein found on tumor tissue, so that the carrier binds to the tumor and releases its cargo there. A published tetrahedral design does this using a MUC1 aptamer for targeting and nanoparticle engines that generate oxygen to propel the structure through tissue. I'm modifying that design so it carries more drug per structure and reports on its own operation: a bigger frame for more cargo, a fourth nanoparticle engine, and a biosensor that confirms the engines are making oxygen.</p>
 
-      <p>[The team and your role: How many people were on the team, and what were you
-      responsible for? For example: CAD design, simulation, testing, or project management.]</p>
+      <p><strong>Methods.</strong> I began by reverse-engineering the published structure, rebuilding it in scadnano and oxView so that it could be simulated in oxDNA. That gives me a validated baseline to measure every modification against, instead of judging a new design on its own. The current version changes the base of the frame from a triangle to a square, which creates the fourth vertex the additional engine needs.</p>
 
-      <p>[The process: How did you go from idea to final design? Mention key decisions,
-      analysis or simulations, prototyping, and the tools you used.]</p>
+      <p><strong>Results, in progress.</strong> The modified structure will be assessed on whether it holds its shape. Hydrogen bond occupancy, root-mean-square fluctuation, and centroid configuration together show whether the enlarged square frame stays as stable as the triangular original. A separate calculation will confirm that four engines generate enough propulsion to move the heavier structure, since extra cargo is no use if the carrier can't reach the tumor.</p>
 
-      <p>[The outcome: What did the final design achieve? Include numbers if you can.
-      End with what you learned or would do differently.]</p>
+      <p><strong>Discussion.</strong> Every improvement here is also a risk to something that already works, which is why I rebuilt the baseline first, since a bigger frame may be less rigid and more cargo is more weight to push. So each change gets measured against the validated original rather than judged on its own, which is the same compare-to-a-reference approach I use in benchmarking and on the plant floor.</p>
     </article>
 
     <a href="projects.html" class="back-link">← Back to projects</a>

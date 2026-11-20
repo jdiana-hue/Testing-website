@@ -41,7 +41,7 @@
     <!-- project header -->
     <header class="project-header">
       <span class="pill pill-mint">Class project</span>
-      <h1>[Project name]: Senior Design</h1>
+      <h1>Benchmarking a Universal Machine-Learning Potential for Semiconductor-Water Interfaces</h1>
     </header>
 
     <!-- main figure -->
@@ -52,17 +52,13 @@
 
     <!-- description -->
     <article class="project-content">
-      <p>[The problem: What was the design challenge? Who was the sponsor or client, if any?
-      Why did it matter?]</p>
+      <p><strong>Introduction.</strong> Semiconductor-water interfaces sit at the center of photoelectrochemical energy conversion, where sunlight is used to split water into fuel, and understanding them means simulating how water arranges itself against a solid surface. Ab initio molecular dynamics does this accurately but costs so much that simulations stay small and short. Machine-learning interatomic potentials trained on large interface datasets promise the same accuracy for a fraction of that cost, but nobody had tested systematically whether that promise holds across different solid chemistries. I benchmarked the energy-conserving eSEN model, trained on the Open Catalyst 2025 dataset, against ab initio trajectories of 22 solid-water interfaces, to work out where the model can be trusted and where it can't.</p>
 
-      <p>[The team and your role: How many people were on the team, and what were you
-      responsible for? For example: CAD design, simulation, testing, or project management.]</p>
+      <p><strong>Methods.</strong> The reference trajectories were PBE-D3 ab initio molecular dynamics runs drawn from the ElectroFace dataset. Using ASE, I ran single-point calculations on those frames to compare forces and relative energies frame by frame, which isolates model error from differences in sampling. Using MDAnalysis, I computed radial distribution functions and bulk water density, testing whether the model reproduces water structure and not only pointwise numbers. I resolved every error by element and by region, separating water, solid, and the boundary between them, because a dataset-wide average can hide a large error on a single species.</p>
 
-      <p>[The process: How did you go from idea to final design? Mention key decisions,
-      analysis or simulations, prototyping, and the tools you used.]</p>
+      <p><strong>Results.</strong> Force errors in the water were nearly identical across all 22 systems, while the large errors were confined to beryllium, gallium, and cobalt cations in the solid. In eSEN molecular dynamics, water was less structured than in the reference in every system, consistent with the RPBE-D3 data the model was trained on, and adsorbed-layer coverage agreed to within 5% for 16 of the 22 interfaces. Cobalt oxide showed the largest deviation.</p>
 
-      <p>[The outcome: What did the final design achieve? Include numbers if you can.
-      End with what you learned or would do differently.]</p>
+      <p><strong>Discussion.</strong> The result is a map of where this model can replace ab initio simulation and where it can't, which is a lot more useful than a single accuracy number. The method travels, too: any group can resolve error by element and region to check a foundation model on their own system. My advisor set the direction, and the analysis and all the reported results are mine.</p>
     </article>
 
     <a href="projects.html" class="back-link">← Back to projects</a>

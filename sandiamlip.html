@@ -41,7 +41,7 @@
     <!-- project header -->
     <header class="project-header">
       <span class="pill pill-mint">Class project</span>
-      <h1>[Project name]: Senior Design</h1>
+      <h1>Machine-Learning Potentials for Nickel-Gold Alloys</h1>
     </header>
 
     <!-- main figure -->
@@ -52,17 +52,13 @@
 
     <!-- description -->
     <article class="project-content">
-      <p>[The problem: What was the design challenge? Who was the sponsor or client, if any?
-      Why did it matter?]</p>
+      <p><strong>Introduction.</strong> Alloy catalysts speed up the chemical reactions behind fuels, fertilizers, and emissions control, and designing better ones depends on simulating how their atoms behave. Quantum-accurate simulation is too expensive to run at useful scale, so researchers train machine-learning interatomic potentials (ML-IPs) to reproduce that accuracy at a fraction of the cost. Nickel is magnetic and gold is not, which raises a question nobody had settled for this alloy: does including magnetism in the training data change how accurate the resulting model is? Under Sandia National Laboratories, our team built magnetic and non-magnetic ML-IPs for nickel-gold and compared them on identical benchmarks.</p>
 
-      <p>[The team and your role: How many people were on the team, and what were you
-      responsible for? For example: CAD design, simulation, testing, or project management.]</p>
+      <p><strong>Methods.</strong> We generated reference data with ab initio molecular dynamics, fit the potentials with FitSNAP, and ran the resulting models in LAMMPS. The work was split between two researchers so that the two models would differ only in their treatment of magnetism: I handled the non-magnetic simulations and a teammate handled the magnetic ones. We evaluated both against the same three benchmarks, namely lattice constants, vacancy formation energy, and substitution energy. Each of those properties is already reported in the published literature, which made our results checkable against a reference outside our own data.</p>
 
-      <p>[The process: How did you go from idea to final design? Mention key decisions,
-      analysis or simulations, prototyping, and the tools you used.]</p>
+      <p><strong>Results.</strong> The project produced two working ML-IP models, one magnetic and one non-magnetic, both reproducing the benchmark properties closely enough to be carried into the comparison. I presented the non-magnetic results, which established the baseline the magnetic model is measured against and set up the continuing work that will answer the original question.</p>
 
-      <p>[The outcome: What did the final design achieve? Include numbers if you can.
-      End with what you learned or would do differently.]</p>
+      <p><strong>Discussion</strong> What made this project useful was picking benchmarks the field had already published. A fast model isn't automatically a trustworthy one, and it only earns that by reproducing values other people have already reported, so choosing the reference before running anything is the same habit as writing acceptance criteria into a protocol before testing starts, and that's what keeps the comparison honest.</p>
     </article>
 
     <a href="projects.html" class="back-link">← Back to projects</a>
