@@ -505,3 +505,21 @@ img{
     transform-origin: center 35%;
     translate: -6px 0;
 }
+
+/* page header projects */
+.page-header{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 72px;
+    padding-bottom: 32px;
+}
+
+.page-header .pill{
+    align-self: flex-start;
+}
+
+.page-header h1{
+    font-size: 52px;
+    letter-spacing: -0.02em;
+}
