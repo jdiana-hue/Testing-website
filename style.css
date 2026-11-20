@@ -84,7 +84,7 @@ img{
 }
 
 .nav-links a{
-    padding: 10 px 16px;
+    padding: 10px 16px;
     border-radius: 999px;
     color: var(--muted);
     font-weight: 500;
@@ -141,4 +141,130 @@ img{
 .btn-white{
     background: white;
     color: var(--indigo-dark);
+}
+
+/* SHARED SPACING */
+.section {
+    padding-top: 24px;
+    padding-bottom: 72px;
+}
+
+.section h2{
+    font-size: 30px;
+    margin-bottom: 24px;
+}
+
+.pill{
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14 px;
+    font-weight: 600;
+}
+
+.pill-coral{
+    background: var(--coral-light);
+    color: var(--coral-dark);
+}
+
+/* INTRO */
+.intro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 56px;
+    padding-top: 88px;
+    padding-bottom: 72px;
+}
+
+.intro-text{
+    flex: 1 1 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.intro-text .pill {
+    align-self: flex-start;
+}
+
+.intro h1{
+    font-size: 60 px;
+    letter-spacing: -0.02em;
+}
+
+.highlight{
+    color: var(--indigo);
+}
+
+.lead{
+    font-size: 19px;
+    color: var(--muted);
+    max-width: 560px;
+}
+
+.button-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px
+}
+
+/* PHOTO AND SHAPES */
+.intro-art{
+    position: relative;
+    width: 340px;
+    height: 340px;
+    margin: 0 auto;
+}
+
+.shape{
+    position: absolute;
+    display: none;
+}
+
+.shape-circle{
+    left: 0;
+    top: 10px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: #ffd8c9;
+}
+
+.shape-square{
+    right: 0;
+    bottom: 0;
+    width: 180px;
+    border-radius: 32px;
+    background: #c9ccff;
+    transform: rotate(12deg);
+}
+
+.shape-dot{
+    right: 24px;
+    top: 0;
+    width: 64px;
+    border-radius: 50%;
+    background: #bdebbd;
+}
+
+.photo{
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 6px solid white;
+    background: white;
+    box-shadow: 0 12px 32px rgba(40, 36, 120, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b6b85;
+    overflow: hidden;
+}
+
+.intro-art{
+    order: -1;
 }
