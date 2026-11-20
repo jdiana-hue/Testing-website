@@ -268,3 +268,149 @@ img{
 .intro-art{
     order: -1;
 }
+
+/* FOCUS CARDS */
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgb(40, 36, 120, 0.10);
+}
+
+.card h3{
+    font-size: 20px;
+}
+
+card p{
+    color: var(--muted);
+}
+
+/* COLORED SQUARE ICONS */
+.icon{
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.icon-indigo{
+    background: var(--indigo-light);
+    color: var(--indigo);
+}
+
+.icon-coral{
+    background: var(--coral-light);
+    color:var(--coral-dark);
+}
+
+.icon-mint{
+    background: var(--mint-light);
+    color: var(--mint-dark);
+}
+
+/* FEATURED PROJECT */
+.feature{
+    background: var(--indigo);
+    color: white;
+    border-radius: 28px;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.feature h2{
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+.feature p{
+    color: #e6e7ff;
+    max-width: 560px;
+}
+
+.eyebrow{
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #dcddff;
+}
+
+/* FOOTER */
+.site-footer{
+    background: white;
+    border-top: 1px solid var(--border);
+}
+
+.footer-inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    font-size: 14px;
+    color: #5a5a73;
+}
+
+/* ===== PHONES & SMALL SCREENS =====
+   Everything inside here only applies when the window
+   is 700px wide or narrower. */
+@media (max-width: 700px) {
+
+    .container {
+        padding: 0 20px;          /* less side space on small screens */
+    }
+
+    .nav {
+        flex-wrap: wrap;          /* links can move below the logo */
+        gap: 12px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+    }
+
+    .intro {
+        padding-top: 48px;
+        gap: 32px;
+    }
+
+    .intro h1 {
+        font-size: 38px;          /* smaller heading on phones */
+    }
+
+    .lead {
+        font-size: 17px;
+    }
+
+    .feature {
+        padding: 28px;
+    }
+
+    .feature h2 {
+        font-size: 26px;
+    }
+}
