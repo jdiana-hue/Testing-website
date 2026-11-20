@@ -434,3 +434,64 @@ img{
         transition: none;
     }
 }
+
+/* HAMBURGER */
+.nav-toggle{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle span{
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: var(--ink);
+    border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+@media (max-width: 700px) {
+    /* Show the button on phones */
+    .nav-toggle {
+        display: flex;
+    }
+
+    /* Hide the links until the menu is opened */
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding-top: 8px;
+    }
+
+    /* JavaScript adds "open" to show them */
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a.btn-primary {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Turn the ☰ into an ✕ when open */
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
