@@ -523,3 +523,131 @@ img{
     font-size: 52px;
     letter-spacing: -0.02em;
 }
+
+/* PILL COLORS
+   (If you already added .pill-blue earlier, skip that one.) */
+.pill-blue {
+    background: var(--indigo-light);
+    color: var(--indigo-dark);
+}
+
+.pill-mint {
+    background: var(--mint-light);
+    color: var(--mint-dark);
+}
+
+/* PROJECT GRID */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+/* PROJECT CARD */
+.project-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    overflow: hidden;            /* keeps the image inside the rounded corners */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+/* Image area at the top of each card */
+.project-thumb {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.project-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tint the image area by category, using the data-category attribute */
+[data-category="research"] .project-thumb {
+    background: var(--indigo-light);
+    color: var(--indigo-dark);
+}
+
+[data-category="coding"] .project-thumb {
+    background: var(--coral-light);
+    color: var(--coral-dark);
+}
+
+[data-category="class"] .project-thumb {
+    background: var(--mint-light);
+    color: var(--mint-dark);
+}
+
+/* Text area of each card */
+.project-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;                /* fills the card so links line up at the bottom */
+}
+
+.project-body .pill {
+    align-self: flex-start;
+    font-size: 13px;
+    padding: 5px 12px;
+}
+
+.project-body h2 {
+    font-size: 21px;
+}
+
+.project-body p {
+    color: var(--muted);
+    font-size: 15px;
+    flex-grow: 1;                /* pushes tags and links to the bottom */
+}
+
+/* Skill tags: turn the bullet list into small chips */
+.tag-list {
+    list-style: none;            /* remove the bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag-list li {
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: #f1f3f7;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Links at the bottom of each card */
+.project-links {
+    display: flex;
+    gap: 18px;
+    padding-top: 4px;
+}
+
+.project-links a {
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
